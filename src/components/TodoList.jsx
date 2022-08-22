@@ -7,6 +7,7 @@ import TodoItem from './TodoItem';
 import TotalCount from './TotalCount';
 
 const TodoList = () => {
+  console.log('ALL_TODO', ALL_TODO)
   const { loading, error, data } = useQuery(ALL_TODO);
   const [toggleTodo, {error: updateError }] = useMutation(UPDATE_TODO);
   const [removeTodo, {error: removeError}] = useMutation(DELETE_TODO, {
