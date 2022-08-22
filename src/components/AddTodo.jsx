@@ -8,7 +8,6 @@ const AddTodo = () => {
   const [addTodo, { error }] = useMutation(ADD_TODO, {
     update(cache, { data: { newTodo } }) {
       const { todos } = cache.readQuery({ query: ALL_TODO });
-
       cache.writeQuery({
         query: ALL_TODO,
         data: {
